@@ -124,7 +124,7 @@ public class Builder {
 		
 		builder.setStyle(new Notification.BigTextStyle(builder)
 				.bigText(options.getText())
-				.setBigContentTitle(options.getTitle());
+				.setBigContentTitle(options.getTitle()));
 		builder.setDefaults(0)
                 .setNumber(options.getBadgeNumber())
                 .setTicker(options.getText())
