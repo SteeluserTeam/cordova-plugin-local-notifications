@@ -120,12 +120,12 @@ public class Builder {
         int ledColor  = options.getLedColor();
         NotificationCompat.Builder builder;
 
-        builder = new NotificationCompat.Builder(context);
-		
-		builder.setStyle(new Notification.BigTextStyle(builder)
-				.bigText(options.getText())
-				.setBigContentTitle(options.getTitle()));
-		builder.setDefaults(0)
+        builder.setStyle(new NotificationCompat.BigTextStyle()
+			.bigText(options.getText())
+			.setBigContentTitle(options.getTitle()));
+	builder.setDefaults(0)
+                .setContentTitle(options.getTitle())
+                .setContentText(options.getText())
                 .setNumber(options.getBadgeNumber())
                 .setTicker(options.getText())
                 .setAutoCancel(options.isAutoClear())
